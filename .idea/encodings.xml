@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/admin/config.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/modules/base.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/modules/config/config.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/modules/menu/menu.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/modules/parser/parser.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/modules/razdel/razdel.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/modules/setup/setup.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/templates/auth.inc-eng.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/templates/auth.inc.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/templates/footer.inc.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/templates/header.inc.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/admin/templates/menu.inc.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/film/long.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/film/nearest.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/film/next_week.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/film/now.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/film/soon.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/pages/contacts.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/pages/menu.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/design/tables/shedule/long.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/for_php/ajax.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/for_php/config.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/for_php/functions.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/for_php/paging.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/for_php/u_mail.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/includes/default.php" charset="windows-1251" />
+  </component>
+</project>
