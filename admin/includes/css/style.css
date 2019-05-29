@@ -1,0 +1,101 @@
+@import url('drop-down_menu.css');
+
+BODY {
+	/*margin:5px;*/
+	/*background:#FFFFFF;*/
+	color:#666666;
+	font-family:'Arial';
+	font-size:12px;
+	SCROLLBAR-TRACK-COLOR:#E7E7E7;
+	SCROLLBAR-BASE-COLOR:#AAAAAA;
+	height: 100%;
+}
+
+form{margin:0;}
+
+.common {
+	margin-bottom:5px;
+	font-family:'Arial';
+	font-size:12px;
+	border:1px solid #C6C6C6;
+	background-color:#F4F4F4;
+/*	width:600px;*/
+}
+.common select, .common input, .common textarea, .common button {
+	float:left;
+	border:1px solid #C6C6C6;
+	background-color:#F4F4F4;
+}
+/*
+.common input{
+	color:blue;
+	font-weight:bold;
+}
+*/
+.common input.file{
+	float:none;
+}
+.external td{
+	border-style:none;
+}
+hr {
+	width:100%;
+	height:1px;
+	border:0px;
+	background:#000000;
+}
+
+._element {
+	width:100%;
+}
+._element table {
+	width:100%;
+	border:1px solid #000000;
+	border-collapse:collapse;
+	/*border-spacing:0px;*/
+}
+._element td {
+	font-size:12px;
+	border:1px solid #000000;
+}
+._caption {
+	font-weight:bold;
+}
+
+#blanket {
+	background-color:#000000;
+	left:0;
+	opacity:0.3;
+	filter = 'Alpha(opacity="30")';
+	position:fixed;
+	top:0;
+	width:100%;
+	height: 100%;
+}
+/*
+#PopUp {
+	border:1px solid #000;
+	background-color:#EEEEEE;
+	position:absolute;
+	width:620px;
+	z-index:999;
+}
+*/
+A:Link {
+	font-family:'Arial';
+	font-size:12px;
+	color:#000000;
+	text-decoration:none;
+	font-weight:none;
+}
+A:Hover {
+	font-family:'Arial';
+	/*font-size:12px;*/
+	color:#000000;
+	/*text-decoration:underline;*/
+	font-weight:none;
+}
+
+
+
+.submitForm4List{width:65px;background-image:url(../../img/buttons/mysql.gif);border:none}

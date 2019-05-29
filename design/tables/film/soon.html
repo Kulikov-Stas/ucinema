@@ -1,0 +1,61 @@
+<section class="leftbar-holder">    
+<?php $content = '';
+	global $msi, $month_arr, $datearr, $weekday_arr;						
+	$q = "SELECT film.nameid, film.country, film.linkid, shedule.date, shedule.time, film.country, film.`year`, film.duration, film.`language`
+        FROM film
+        INNER JOIN shedule ON film.id = shedule.nameid
+        WHERE unix_timestamp(concat(`date`,' ',`time`)) > unix_timestamp(now())
+        AND year(concat(`date`,' ',`time`)) = year(now()) AND week(concat(`date`,' ',`time`), 1) > week(now(), 1) + 1
+        ORDER BY date ASC, time ASC";
+						
+	$r = $msi->query($q); 
+                                
+	while($row = $r->fetch_assoc()){
+            
+            $date = $row['date'];
+            $datearr = explode('-',$row['date']);
+            
+            if ($date != $prev_date){
+		$content .= '<section class="schedule-holder">
+    <h2>'.$weekday_arr[date('l',mktime(0,0,0,$datearr[1],$datearr[2],$datearr[0]))].', '.(int)$datearr[2].' '.$month_arr[$datearr[1]].'</h2>
+                                                <ul>';
+        $p = "SELECT shedule.id, shedule.link as link, film.nameid, film.country, film.linkid, shedule.date, shedule.time, film.country, film.`year`, film.duration, film.`language`
+        FROM film
+        INNER JOIN shedule ON film.id = shedule.nameid
+        WHERE unix_timestamp(concat(`date`,' ',`time`)) > unix_timestamp(now())
+        AND year(concat(`date`,' ',`time`)) = year(now()) AND week(concat(`date`,' ',`time`), 1) > week(now(), 1) + 1
+        AND shedule.visible = 1 AND shedule.date = '$date' ORDER BY shedule.date ASC, shedule.time ASC";
+
+	$o = $msi->query($p);
+
+		while($i = $o->fetch_assoc()){
+                                $time = explode(':',$i['time']);
+                                $hour = $time[0];
+                                $minutes = $time[1];
+                                            $content .= '<li>
+								<section class="time">
+									<span class="time-container"><span class="first-count">'.$hour.'</span><span class="second-count">'.$minutes.'</span></span>
+								</section>
+								<section class="schedule-mid-holder">
+									<a href="/affiche/'.$i['linkid'].'/"><h3>'.$i['nameid'].'</h3></a>
+									<section class="film-discription">
+										<span class="country">'.$i['country'].'</span>
+										<span class="year">/ '.$i['year'].'</span>
+										<span class="length">/ '.substr($i['duration'],0,-3).'</span>
+										<span class="translate">/ '.$i['language'].' дубляж</span>
+									</section>
+								</section>
+								<form method="get" action="'.$i['link'].'?shedule-id='.$i['id'].'">
+                                                                    <button class="button" type="submit">билеты</button>
+                                                                     <input type="hidden" name="shedule-id" value="'.$i['id'].'" />
+                                                                </form>
+							</li>';
+                }
+                                    $content .= '</ul>
+                            </section>';
+            }
+        $prev_date = $date;                    
+	}       
+	echo $content;        
+?>    
+</section>

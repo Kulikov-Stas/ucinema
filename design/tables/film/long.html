@@ -1,0 +1,33 @@
+					<h1 class="film-title">[VALUE "nameid"]</h1>
+					<?php $image1 = '[VALUE="image1"]';
+				if (!empty($image1)){
+					echo '<a href="'.$image1.'" class="film-poster">
+		<img class="film-poster" src="'.(($thumbimg = CreateThumb(160, 235, $image1, 'gallery')) ? $thumbimg : '').'" alt="#" />
+					     </a>';
+						     }
+					?>				
+				<ul class="film-info">
+					<li>Год: <span>[VALUE "year"]</span></li>
+					<li>Страна: <span>[VALUE "country"]</span></li>
+					<li>Жанр: <span>[VALUE "genre"]</span></li>
+					<li>Режисер: <span>[VALUE "director"]</span></li>					
+					<li>В ролях: <span>[VALUE "cast"]</span></li>
+					<li>Длительность: <span>[VALUE "duration"]</span></li>
+					<li>Язык показа: <span>[VALUE "language"]</span></li>
+				</ul>
+				<div class="clear"></div>
+				<p class="film-description" >[VALUE "description"]</p>
+				<h2 class="film-title">Кадры из фильма</h2>
+				<section class="screenshots">
+					<?php $image1 = '[VALUE="image1"]'; $image2 = '[VALUE="image2"]'; $image3 = '[VALUE="image3"]'; $image4 = '[VALUE="image4"]'; $image5 = '[VALUE="image5"]'; $image6 = '[VALUE="image6"]'; $image7 = '[VALUE="image7"]'; $image8 = '[VALUE="image8"]'; $image9 = '[VALUE="image9"]'; $image10 = '[VALUE="image10"]';
+					for($i=1;$i<=10;$i++)
+					{
+						$x='image'.$i;
+						if (!empty($$x)){
+							echo '<a href="'.$$x.'" class="screenshot-gallery" rel="group">
+						<img src="'.(($thumbimg = CreateThumb(300, 200, $$x, 'gallery')) ? $thumbimg : '').'" alt=""></a>';
+						}					
+					} ?>
+				</section>
+				<h2 class="film-title">Трейлер</h2>
+				[VALUE "trailer"]

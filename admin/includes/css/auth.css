@@ -1,0 +1,157 @@
+a img {
+        border: none;
+    }
+    * {
+        outline: none;
+    }
+    body, html {
+        height: 100%;
+        width: 100%;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        min-width: 1000px;
+        /*min-height: 700px;*/
+        font-family: Arial, Helvetica, Sans-serif;
+    }
+    .ltCol {
+        float: left;
+        /*width: 25%;*/
+        margin-left: 9%;
+        /*border: 1px solid red*/
+    }
+    .ltCol div {
+        /*padding-left: 22px;*/
+        
+        border-right: 1px solid #e1e1e1;
+    }
+    .ltCol div a.goBack {
+        font-size: 25px;
+        color: #0a5ca2;
+        background: url(../../img/auth/gb.gif) 0 center no-repeat;
+        text-decoration: none;
+        padding-left: 20px;
+        padding-right: 11px;
+    }
+    .ltCol div a.adr {
+        padding-left: 20px;
+        padding-right: 11px;
+        color: #0a5ca2;
+        font-size: 13px;
+    }
+    .rtCol {
+       float: left;
+       padding-left: 3.5%;
+       /*border: 1px solid red;*/
+    }
+    .ltCol, .rtCol {
+        margin-top: 9%;
+    }
+    .rtCol h1, p.ooo a{
+        color: #fbab00;
+    }
+    .rtCol h1 {
+        font-size: 25px;
+        line-height: normal;
+        margin: 0;
+    }
+    p.ooo {
+        margin: 0 0 40px 0;
+        font-size: 13px;
+    }
+    .rtCol h5, .rtCol label, .rtCol span {
+        color: #787777;
+    }
+    .rtCol h5 {
+        font-size: 12px;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+    .formBg {
+       background: url(../../img/auth/form_bg.gif) 0 0 no-repeat;
+       width: 253px;
+       height: 176px;
+       padding: 20px 58px 0 35px; 
+       margin-bottom: 130px;
+    }
+    .formBg table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+        *margin-bottom: 15px;
+    }
+    .formBg table td {
+        padding: 7.5px 0;
+    }
+    .rtCol label {
+    		margin-right:10px;
+            font-size: 17px;
+    }
+    .rtCol input {
+        width: 100%;
+        *width: 90%;
+        height: 24px;
+        margin: 0;
+        padding: 0;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #8e8e8e #cecece #e4e4e4 #cecece;
+        width: 100%;
+        background: url(../../img/auth/inp_bg.gif) 0 0 repeat-x #fff;
+        padding: 0 3px;
+        *width: 98%;
+        line-height: 24px;
+        /**border: 1px solid red;*/
+    }
+    .rtCol input.chkbx {
+        display: inline;
+        width: auto;
+        height: auto;
+        margin-right: 5px;
+        border: none;
+        background: none;
+        padding: 0;
+    }
+    .rtCol span {
+        font-size: 14px;
+    }
+    .rtCol input.submit {
+    margin-top:-2px;
+         margin-left:90px;
+         width: 103px;
+         height: 40px;
+         background: url(../../img/auth/sub_button.png) 0 0 no-repeat;
+         border: none;
+         cursor: pointer;
+         display: block;
+         padding: 0;
+    }
+    .footer {
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        width: 100%;
+    }
+    .footer a {
+        text-decoration: none;
+        font-size: 11px;
+        color: #bfbfbf;
+        margin-left: 20px;
+        display: block;
+    }
+    .footer a img {
+        display: block;
+    }
+    .footer a span {
+        text-decoration: underline;
+    }
+    
+.langForm {
+    margin-top: 40px;
+    padding: 0 11px 0 20px;
+}
+.langForm select {
+    width: 100%;
+    
+   *width: 123px;
+}

@@ -1,0 +1,24 @@
+<ul>
+<?php global $msi; $result = '';
+$uri = getUri();
+$q = 'SELECT `name`, `rus`, `link` FROM defmenu WHERE `visible` = 1 ORDER BY `order`';
+$r = $msi->query($q);
+if($r && $r->num_rows)
+{
+    while($row = $r->fetch_assoc())
+    {
+        $result .= '<li';
+        if(($uri[0] == $row['name']) || ($row['link'] == '/' && empty($uri[0])))
+        {$result .= ' class="active"';}
+        $result .= '><a ';  
+        $result .= ' href="'.$row['link'].'" ';
+        $result .= '><span>'.$row['rus'].'</span></a></li>';
+    }
+}
+echo $result;
+?> 
+</ul>   
+<!--	<li class="active"><a href="#"><span>Афиша</span></a></li>
+	<li><a href="#"><span>Расписание</span></a></li>
+	<li><a href="#"><span>Кинотеатр</span></a></li>
+	<li><a href="#"><span>Связь</span></a></li>    -->    

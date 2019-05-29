@@ -1,0 +1,18 @@
+img {
+	border:none;
+}
+
+.header-holder {
+	background-image: url(../images/header-holder.png);
+	background-repeat: repeat-x;
+}
+
+.film-slider-bg {
+	background-image: url(../images/header-holder.png);
+	background-repeat: repeat;
+}
+
+.disc {
+	background-image: url(../images/header-holder.png);
+	background-repeat: repeat-x;	
+}

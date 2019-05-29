@@ -1,0 +1,81 @@
+
+
+H1 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF6633;
+	margin: 5 0 5 5px;
+}
+a, a:link, a:visited, a:active {
+	
+}
+a:hover, a.active{
+	
+}
+
+#content h2{
+    color:#505050;
+    font:17px arial;
+	margin-bottom:10px;
+	display:block;
+}
+#content  .menu h2, #content  .razdel h2{
+	margin:0;
+	display:inline;
+}
+.config .bottom{
+padding: 20px 120px 10px 0;
+left: -20px;
+}
+.config form{
+padding: 20px 100px 0 20px;
+background: #eeeeee;
+display: inline-block;
+}
+
+.inp {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	background-image: url(../pictures/dots.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border: none;
+}
+.inp2 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: transparent;
+
+	border: none;
+}
+.orange {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FF6633;
+	/*text-decoration: underline;*/
+}
+.subm {
+	width:115px;
+	height:18px;
+	border: none;
+
+}
+select {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.menuinad td {
+	padding: 0 1 0 1px;
+	
+}
+
+
+
+
+/****** ******/

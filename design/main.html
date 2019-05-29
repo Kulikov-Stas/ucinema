@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>[TITLE]</title>
+	<meta name="description" content="[DESCRIPTION]" />
+	<meta name="description" content="[KEYWORDS]">
+	<link rel="stylesheet" href="/css/styles.css" media="screen">
+	<link rel="stylesheet" href="/css/jquery-ui-1.10.3.custom.css" media="screen">
+
+	<!--[if IE 8]><link rel='stylesheet' type='text/css' href='css/ie8.css'><![endif]-->
+	<!--[if IE 9]><link rel='stylesheet' type='text/css' href='css/ie9.css'><![endif]-->
+	<!--[if IE]><script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+	<!--[if (gte IE 6)&(lte IE 8)]><script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.6.14/selectize.min.js'></script><![endif]-->
+</head>
+<body>
+	<header class="header-holder">
+		<nav class="header-nav">
+			<a class="logo" href="/"><img src="/images/logo.png" alt=""></a>
+			<section class="post-form">
+			<a class="post" href="#">Почтовая рассылка</a>
+				<input type="text" placeholder="Ваше имя">
+				<input type="text" placeholder="Ваш e-mail">
+				<button class="button">Подписаться</button>
+			</section><!-- end post-form -->  
+			<ul class="header-menu">
+				<li class="item1"><a href="#">Кинотеатр</a></li>
+				<li class="item2"><a href="#">Связь</a></li>
+				<li class="item3" ><a href="#"></a></li>
+				<li class="item4" ><a href="#"></a></li>
+				<li class="item5" ><a href="#"></a></li>
+			</ul><!-- end header-menu -->
+			<button class="hold">Бронировать билеты</button>  
+		</nav><!-- end header-nav -->  
+	</header><!-- end header -->  
+	<section class="sliders-holder">
+		<section class="fw-slider">
+			<div class="fw-holder">
+				<div class="fw-carousel">
+					<?php echo bigSlider();?>
+				</div>
+					<p id="prev" > </p>
+					<p id="next" > </p>
+					<div id="pager"></div>
+				</div>
+		</section><!-- end fw-slider -->  
+		<section class="mid-slider">
+			<div class="mid-holder">
+			<div class="slider-bg">
+						
+					</div>
+				<div class="mid-carousel">
+                        <?php echo smallSlider();?>
+				</div>
+					<div class="pager"></div>
+			</div><!-- end mid-carousel -->  
+		</section><!-- end mid-slider -->  
+	</section><!-- end sliders-holder -->
+<div style="overflow-x:hidden; width:100%;">
+	<section class="timeline-bg"></section>
+	<section class="content">
+	<button class="scroll-to-top">scroll</button>
+		<div id="tabs">
+			<ul>
+  			  <li class="tab-item1"><a href="#tabs-1">Смотрите сейчас <span class="count-films"><?php echo count_now(); ?></span>
+			  <!--<span class="month">октябрь</span>--></a></li>
+  			  <li class="tab-item2"><a href="#tabs-2">На следующей неделе<span class="count-films"><?php echo count_next(); ?> </span>
+			  <!--<span class="month">ноябрь</span>--></a></li>
+  			  <li class="tab-item3"><a href="#tabs-3">Скоро на экране<span class="count-films"><?php echo count_soon(); ?> </span>
+			  <!--<span class="month">декабрь</span>--></a></li>
+  			</ul>
+  			<div id="tabs-1">
+				<h1>Смотрите сейчас</h1>
+					[ADD "film" "now"]
+				<section class="sidebar">
+					[ADD "film" "nearest"]			
+				</section>			
+  			</div><!-- end tabs1 -->  
+  			<div id="tabs-2">
+				<h1>На следующей неделе</h1>
+					[ADD "film" "next_week"]
+				<section class="sidebar">
+					[ADD "film" "nearest"]					
+				</section> 
+  			</div>
+  			<div id="tabs-3">
+				<h1>Скоро на экране</h1>
+					[ADD "film" "soon"]
+				<section class="sidebar">
+					[ADD "film" "nearest"]					
+				</section>
+		</div><!-- end tabs --> 
+	</section><!-- end content -->  
+	</div>
+	<footer>
+		<section class="footer-container">
+			<section class="footer-left-container">
+				<p>© Кинотеатр «U-CINEMA», 2010–2013 Одесса, Французский бульвар, 33</p>
+				<p>Создание сайта - <a target="_blank" href="http://yesgroup.com.ua">Yesgroup</a></p>
+			</section><!-- end foote-rleft-container -->  
+			<section class="footer-mid-container">
+				<ul>
+					<li><a href="/">Афиша</a></li>
+					<li><a href="#">Расписание</a></li>
+					<li><a href="#">Кинотеатр</a></li>
+				</ul>
+			</section><!-- end footer-mid-container --> 
+			<section class="footer-right-container">
+			 	<p>Предварительный заказ билетов: <span>(0482) 33-92-55</span></p>
+			 	<span class="bt-t">ежедневно с 16:00 до 21:00</span>
+			 </section> <!-- end foote-right-container -->  
+		</section><!-- end footer-container -->  
+	</footer>
+	<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="/js/other-crap.js"></script>
+	<script type="text/javascript" src="/js/jquery.carouFredSel-6.2.1.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+					<h2>Ближайшие <span>события</span></h2>
+<?php $content = '';
+        global $msi, $month, $weekday_arr;
+	$q = "SELECT film.nameid, film.image2, film.linkid,min(unix_timestamp(concat(`date`,' ',`time`))) as x
+	FROM `shedule` left join film on film.id = shedule.nameid
+	WHERE unix_timestamp(concat(`date`,' ',`time`))>unix_timestamp(now())
+	GROUP BY nameid HAVING x>unix_timestamp(now()) ORDER BY x ASC";
+
+	$r = $msi->query($q);
+
+	while($row = $r->fetch_assoc()){		
+	    $x = date('Y-m-d H:i:s', $row['x']);
+	    list($year, $mon, $day, $hour, $minutes, $sec) = preg_split('/[- :]/', $x);	    
+	     
+	     
+		$content .= '<section class="sidebar-film-holder">
+						<section class="time-holder">
+						<span class="time-holder-date">'.$day.'<span>'.$month[$mon].'</span></span>
+							<span class="time-holder-time">'.$hour.':'.$minutes.'</span>
+						</section><!-- end time-holder -->
+						<section class="poster">
+							<a href="/affiche/'.$row['linkid'].'/">
+								<img src="'.CreateThumb2(240,135,$row['image2'],'films').'" alt="">
+								<h4 class="disc">'.$row['nameid'].'</h4>
+							</a>
+                                                </section><!-- end poster -->
+                            </section>';
+                }
+	echo $content;
+?>

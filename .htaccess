@@ -1,0 +1,24 @@
+AddType application/force-download xls
+AddDefaultCharset windows-1251
+RewriteEngine on
+
+Options -Indexes
+Options +FollowSymlinks
+RewriteBase /
+
+RewriteRule ^redirect.php$ redirect.php [QSA,L]
+RewriteRule ^parse.xml$ /for_php/xmlbuilder.php [L]
+
+RewriteCond %{REQUEST_URI} !^/admin[/]*
+RewriteCond %{REQUEST_URI} !^/includes
+RewriteCond %{REQUEST_URI} !^/siteimg
+RewriteCond %{REQUEST_URI} !^/err
+RewriteCond %{REQUEST_URI} !^/css
+RewriteCond %{REQUEST_URI} !^/images
+RewriteCond %{REQUEST_URI} !^/js
+
+
+
+#RewriteRule ^(.*)$ index.php [L]
+
+RewriteRule ^([a-zA-Z0-9_\!]*)/?([a-zA-Z0-9_\!]*)/?([a-zA-Z0-9_\!]*)/?([a-zA-Z0-9_\!]*)/?([a-zA-Z0-9_\!]*)(/?)$ index.php?page=$1&link1=$2&link2=$3&link3=$4&pp=$5 [L,QSA]

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Films</title>
+	<link rel="stylesheet" href="/css/styles.css" media="screen">
+	<link rel="stylesheet" href="/css/jquery-ui-1.10.3.custom.css" media="screen">
+	<link rel="stylesheet" href="/css/jquery.fancybox.css" media="screen">
+
+	<!--[if IE 8]><link rel='stylesheet' type='text/css' href='/css/ie8.css'><![endif]-->
+	<!--[if IE 9]><link rel='stylesheet' type='text/css' href='/css/ie9.css'><![endif]-->
+	<!--[if IE]><script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+	<!--[if (gte IE 6)&(lte IE 8)]><script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.6.14/selectize.min.js'></script><![endif]-->
+</head>
+<body>
+	<header class="header-holder">
+		<nav class="header-nav">
+			<a class="logo" href="/"><img src="/images/logo.png" alt=""></a>
+			<section class="post-form">
+			<a class="post" href="#">Почтовая рассылка</a>
+				<input type="text" placeholder="Ваше имя">
+				<input type="text" placeholder="Ваш e-mail">
+				<button class="button">Подписаться</button>
+			</section><!-- end post-form -->  
+			<ul class="header-menu">
+				<li class="item1"><a href="#">Кинотеатр</a></li>
+				<li class="item2"><a href="#">Связь</a></li>
+				<li class="item3" ><a href="#"></a></li>
+				<li class="item4" ><a href="#"></a></li>
+				<li class="item5" ><a href="#"></a></li>
+			</ul><!-- end header-menu -->
+			<?php echo book(); ?>		 
+		</nav><!-- end header-nav -->  
+	</header><!-- end header -->  
+	<section class="sliders-holder">
+		<section class="film-slider-bg">
+			<div style="margin:0 auto; width:1000px;">
+				<div class="left-block"></div>
+				<div class="right-block"></div>
+				<?php echo slide_text(); ?>
+			</div>
+		</section>
+		<section class="fw-slider film-big-poster">
+			<section class="poster-holder">
+				<?php echo slide_left(); ?>
+				<?php echo slide_main(); ?>
+				<?php echo slide_right(); ?>
+			</section><!-- end poster-holder -->  
+		</section><!-- end fw-slider -->  
+	</section><!-- end sliders-holder -->
+<div style="overflow-x:hidden; width:100%;">	
+	<section class="content film-content">
+		<button class="scroll-to-top">scroll</button>
+			<section class="film-holder">
+				[CONTENT]
+			</section><!-- end film-holder -->  
+				<section class="sidebar film-sidebar"> 
+					[ADD "film" "nearest"]						
+				</section><!-- end sidebar -->
+				<section class="leftbar-holder film-leftbar-holder">
+					[ADD "shedule" "long"]
+				</section><!-- end leftbar-holder -->  
+	</section><!-- end content -->  
+	</div>
+	<footer>
+		<section class="footer-container">
+			<section class="footer-left-container">
+				<p>© Кинотеатр «U-CINEMA», 2010–2013 Одесса, Французский бульвар, 33</p>
+				<p>Создание сайта - <a href="yesgroup.com.ua">Yesgroup</a></p>
+			</section><!-- end foote-rleft-container -->  
+			<section class="footer-mid-container">
+				<ul>
+					<li><a href="/">Афиша</a></li>
+					<li><a href="#">Расписание</a></li>
+					<li><a href="#">Кинотеатр</a></li>
+				</ul>
+			</section><!-- end footer-mid-container --> 
+			<section class="footer-right-container">
+			 	<p>Предварительный заказ билетов: <span>(0482) 33-92-55</span></p>
+			 	<span class="bt-t">ежедневно с 16:00 до 21:00</span>
+			 </section> <!-- end foote-right-container -->  
+		</section><!-- end footer-container -->  
+	</footer>
+	<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="/js/other-crap.js"></script>
+	<script type="text/javascript" src="/js/jquery.carouFredSel-6.2.1.js"></script>
+</body>
+</html> 

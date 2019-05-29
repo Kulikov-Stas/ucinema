@@ -1,0 +1,893 @@
+/* =============================================================================
+   Site/project: ---------------
+   Autor: Kharitonov Alexandr
+   CSS version: 5.0.1
+   @include ---------------
+   ========================================================================== */
+
+/* =============================================================================
+   /fonts (http://www./fontsquirrel.com/fontface/generator)
+   ========================================================================== */
+@font-face {
+   font-family: 'ZektonRgregular';
+   src: url('fonts/zektonrg-regular-webfont.eot');
+   src: url('fonts/zektonrg-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/zektonrg-regular-webfont.woff') format('woff'),
+         url('fonts/zektonrg-regular-webfont.ttf') format('truetype'),
+         url('fonts/zektonrg-regular-webfont.svg#zekton_rgregular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'ArialNarrow';
+   src: url('fonts/arial-narrow-regular.eot');
+   src: url('fonts/arial-narrow-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/arial-narrow-regular.woff') format('woff'),
+	 url('fonts/arial-narrow-regular.ttf') format('truetype'),
+         url('fonts/arial-narrow-regular.svg#arial-narrow-regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'ArialNarrow-Bold';
+   src: url('fonts/arialnarrowbold.eot');
+   src: url('fonts/arialnarrowbold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/arialnarrowbold.woff') format('woff'),
+         url('fonts/arialnarrowbold.ttf') format('truetype'),
+         url('fonts/arialnarrowbold.svg#arialnarrowbold') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'BastionKontrastAltC';
+   src: url('fonts/bastionkontrastaltc.eot');
+   src: url('fonts/bastionkontrastaltc.eot?#iefix') format('embedded-opentype'),
+	 url('fonts/bastionkontrastaltc.woff') format('woff'),
+	 url('fonts/bastionkontrastaltc.ttf') format('truetype'),
+         url('fonts/bastionkontrastaltc.svg#bastionkontrastaltc') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+/* =============================================================================
+   General Styles
+   ========================================================================== */
+html {
+   font-size: 100%;
+   height: 100%;
+   
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+}
+body {
+   background: url('/images/background/blur.png') no-repeat scroll center top #d7d7d7;
+   width: 100%; height: 100%;
+}
+.settings {
+   position: relative;
+   width: 1000px;
+   margin: 0 auto;
+}
+
+/* =============================================================================
+   Selection (marcker)
+   ========================================================================== */
+::-moz-selection { background: #94c11f; color: #fefefe; text-shadow: none; }
+::selection { background: #94c11f; color: #fefefe; text-shadow: none; }
+
+/* =============================================================================
+   ul.dpor-menu
+   ========================================================================== */
+ul.dpor-menu {
+   position: absolute;
+   display: none;
+   left: 0; top: -16px;
+   width: 320px;
+   z-index: 10;
+   padding-top: 77px;
+   
+   opacity: 0;
+   filter: alpha(opacity=0);
+}
+   ul.dpor-menu li {
+      background: none repeat scroll 0 0 #6d9601 !important;
+      float: none !important;
+      display: inline-block !important;
+      border: 1px solid #076633;
+      margin-bottom: -15px;
+      
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+       
+      position: relative;
+      behavior: url(/css/PIE/PIE.htc);
+   }
+      ul.dpor-menu li:hover {
+	 background: none repeat scroll 0 0 #3baa36 !important;
+      }
+      ul.dpor-menu li a {
+	 font: 13px 'ArialNarrow-Bold',sans-serif !important;
+	 width: 257px;
+	 padding: 15px 30px 30px !important;
+	 letter-spacing: 0.1px;
+      }
+	 ul.dpor-menu li a.last {
+	    padding: 15px 30px !important;
+	 }
+   li.item-hover ul.ul.dpor-menu {
+      display: block !important;
+   }
+
+/* =============================================================================
+   Header Styles
+   ========================================================================== */
+header {
+   position: relative;
+   height: 100px;
+}
+   header a.logo {
+      display: inline-block;
+      position: absolute;
+      left: 20px; top: 13px;
+   }
+   header div.telephone {
+      background: url('/images/background/telephone.png') no-repeat scroll 0 center transparent;
+      padding-left: 61px;
+      float: right;
+      margin-top: 40px;
+      height: 53px;
+   }
+      header div.telephone span {
+         font: 20px 'ZektonRgregular', sans-serif;
+         color: #6e6e6e;
+         display: block;
+         margin: 0px 0 3px;
+      }
+/* =============================================================================
+   XFont styles
+   ========================================================================== */
+h1 {
+   font: 25px 'ArialNarrow-Bold', sans-serif;
+   text-shadow: 0 1px 0 #fff;
+   display: block;
+   margin-bottom: 5px;
+   clear: both;
+}
+h2 {
+   font: 16px 'ArialNarrow-Bold', sans-serif;
+   display: block;
+   color: #60800d;
+   text-transform: uppercase;
+   clear: both;
+}
+img.left {
+   float: left;
+   border-bottom: 15px solid #60800d;
+   margin-bottom: 15px;
+   margin-right: 15px;
+   border: none;
+}
+ol {
+   list-style-image: url('/images/background/ul/ol.png');
+   color: #666666;
+   font-size: 12px;
+   padding-left: 25px;
+   margin-bottom: 10px;
+}
+   ol li {
+      margin: 3px 0;
+      padding-left: 2px;
+   }
+a {
+   color: #60800d;
+}
+   a:hover {
+      color: #2c2c2c;
+      text-decoration: none;
+   }
+/* =============================================================================
+   Navigation Styles
+   ========================================================================== */
+nav {
+   background: none repeat scroll 0 0 #94c11f;
+   border-top: 6px solid #076633;
+   height: 58px;
+}
+   nav ul.navigation {
+      list-style: none;
+   }
+      nav ul.navigation li {
+         background: url('/images/background/ul/navigation-border.jpg') repeat-y scroll right 0 transparent;
+         float: left;
+	 position: relative;
+      }
+         nav ul.navigation li a {
+            font: 17px 'ArialNarrow-Bold', sans-serif;
+            color: #fff;
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 18px 50px;
+	    z-index: 11;
+	    position: relative;
+         }
+         nav ul.navigation li.last {
+            background: none repeat-y scroll right 0 transparent;
+         }
+
+
+/* =============================================================================
+   div.slides
+   ========================================================================== */
+div.slides {
+   position: relative;
+   margin: 3px 0;
+}
+   div.slides img.slide-img {
+      width: 1000px;
+      display: block;
+   }
+   div.slides div.promo {
+      background: none repeat scroll 0 0 #94c11f;
+      padding: 15px 33px 20px;
+      right: 24px; top: 29px;
+      width: 285px;
+      
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      
+      position: absolute;
+      behavior: url(css/PIE/PIE.htc);
+   }
+      div.slides div.promo p {
+         font: 12px Arial, sans-serif;
+         line-height: 18px;
+         letter-spacing: 0.25px;
+         color: #fff;
+         text-shadow: 0 1px 0 #618012;
+      }
+
+
+/* =============================================================================
+   div.slides
+   ========================================================================== */
+aside.price {
+   display: block;
+   background-color: #fff;
+   height: 110px;
+   border-bottom: 1px solid #aeaeae;
+   
+   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+   
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   
+   position: relative;   
+   behavior: url(/css/PIE/PIE.htc);
+}
+   div.steps {
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+      position: relative;
+      width: 665px; height: 110px;
+      
+   }
+   div.first-step, div.second-step, div.third-step {
+      vertical-align: top;
+      position: absolute;
+      left: 0px; top: 0;
+      width: 705px;
+   }
+   div.first-step {
+      padding-left: 27px;
+   }
+   div.second-step {
+      padding-left: 27px;
+      left: 700px; top: 0;
+   }
+   div.third-step {
+      padding-left: 27px;
+      left: 1400px; top: 0;
+      width: 680px; text-align: center;
+   }
+   div.third-step span {
+      margin: 10px;
+      color: #6E6E6E;
+      display: block;
+   }
+   div.third-step img.logo {
+      width: 170px;
+   }
+   a.back-to {
+      position: absolute;
+      display: none;
+      top: 82px;
+      z-index: 10;
+      left: 205px;
+   }
+   
+   aside.price div.title {
+      background: none repeat scroll 0 0 #92c722;
+      display: inline-block;
+      padding: 10px 26px;
+      width: 205px;
+      position: relative;
+      z-index: 9;
+      
+      -webkit-border-radius: 4px 0 0 4px;
+      -moz-border-radius: 4px 0 0 4px;
+      border-radius: 4px 0 0 4px;
+         
+      behavior: url(/css/PIE/PIE.htc);
+   }
+      aside.price div.title span {
+         font: 25px 'BastionKontrastAltC', sans-serif;
+         line-height: 30px;
+         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+         letter-spacing: 0.5px;
+         color: #fefefe;
+         display: inline-block;
+      }
+      aside.price div.title div.title-arr {
+         background: url('/images/background/title-arr.png') no-repeat scroll 0 0 transparent;
+         position: absolute;
+         right: -17px; top: 36px;
+         width: 18px; height: 36px;
+      }
+   aside.price div.fieldset {
+      display: inline-block;
+      width: 300px;
+      vertical-align: top;
+      margin-top: 9px;
+   }
+      aside.price div.fieldset fieldset {
+         display: inline-block;
+         margin: 4px 0;
+         position: relative;
+      }
+         aside.price div.fieldset fieldset label {
+            font-size: 12px;
+            color: #7c7b7b;
+            width: 115px;
+            text-align: right;
+            padding-right: 13px;
+            display: inline-block;
+         }
+	 aside.price div.fieldset fieldset select {
+	    height: 24px;
+	    width: 160px;
+	    
+	    border-top: 1px solid #7d7d7d;
+	    border-left: 1px solid #7d7d7d;
+	    border-right: 1px solid #e1e2e3;
+	    border-bottom: 1px solid #e1e2e3;
+	    
+	    -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            
+            position: relative;
+            behavior: url(css/PIE/PIE.htc);
+	 }
+	 aside.price div.fieldset fieldset textarea {
+	    min-width: 138px;
+	    max-width: 138px;
+	    min-height: 49px;
+	    max-height: 49px;
+	    
+            border-top: 1px solid #7d7d7d;
+	    border-left: 1px solid #7d7d7d;
+	    border-right: 1px solid #e1e2e3;
+	    border-bottom: 1px solid #e1e2e3;
+	    
+            padding: 2px 10px;
+            color: #7c7b7b;
+	    vertical-align: top;
+            
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            
+            position: relative;
+            behavior: url(css/PIE/PIE.htc);
+	 }
+         aside.price div.fieldset fieldset input {
+            width: 138px;
+            
+	    border-top: 1px solid #7d7d7d;
+	    border-left: 1px solid #7d7d7d;
+	    border-right: 1px solid #e1e2e3;
+	    border-bottom: 1px solid #e1e2e3;
+	    
+            padding: 2px 10px;
+            color: #7c7b7b;
+            
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            
+            position: relative;
+            behavior: url(css/PIE/PIE.htc);
+         }
+         aside.price div.fieldset fieldset input:focus, aside.price div.fieldset fieldset textarea:focus, aside.price div.fieldset fieldset select:focus  {
+	    border-top: 1px solid #94c11f;
+	    border-left: 1px solid #94c11f;
+	    border-right: 1px solid #698817;
+	    border-bottom: 1px solid #698817;
+         }
+         aside.price a.go {
+            display: inline-block;
+	    position: relative;
+	    vertical-align: top;
+         }
+            aside.price a.go img {
+               display: block;
+               width: 54px; height: 110px;
+            }
+         
+/* =============================================================================
+   div.i-open
+   ========================================================================== */
+div.i-open {
+   background: url('/images/background/i.png') no-repeat scroll 0 0 transparent;
+   position: absolute;
+   top: 6px; left: 117px;
+   width: 12px; height: 12px;
+   cursor: pointer;
+}
+   div.window {
+      background: #000;
+      display: none;
+      width: 700px;
+      z-index: 11;
+      margin: 0 auto;
+      left: 120px; top: 160px;
+      padding: 20px;
+      
+      background: none repeat scroll 0 0 #fff;
+      border-top: 6px solid #94c11f;
+      border-bottom: 6px solid #94c11f;
+      overflow: hidden;
+      
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      
+      position: absolute;
+      behavior: url(css/PIE/PIE.htc);
+   }
+   table {
+      font-size: 12px;
+   }
+      table thead {
+         
+         text-align: center;
+      }
+         table thead {
+            background: none repeat scroll 0 0 #dbff7d;
+            text-align: center;
+            text-shadow: 0 1px 0 #fff;
+         }
+            table thead tr:hover {
+               background: none repeat scroll 0 0 #dbff7d;
+            }
+      table tr td {
+         border: 1px solid #94c11f;
+         padding: 5px;
+         vertical-align: middle;
+      }
+      table tr:hover {
+         background: none repeat scroll 0 0 #e3ff9a;
+         cursor: pointer;
+      }
+   
+div.mask {
+   background: none repeat scroll 0 0 #000;
+   position: absolute;
+   left: 0px; top: 0px;
+   width: 100%; height: 100%;
+   z-index: 10;
+   
+   opacity: 0;
+   filter: alpha(opacity=0);
+}
+/* =============================================================================
+   Content / Description
+   ========================================================================== */
+section.content {
+   position: relative;
+   width: 952px;
+   margin: 13px auto 44px;
+}
+   section.content p {
+      font: 12px Arial, sans-serif;
+      line-height: 14px;
+      letter-spacing: 0.2px;
+      color: #666666;
+      padding: 4px 0 10px;
+      
+   }
+ 
+div.item {
+   display: inline-block;
+   vertical-align: top;
+   width: 470px;
+   margin: 20px 0 40px;
+}
+   div.item img {
+      display: inline-block;
+      vertical-align: top;
+      width: 143px;
+   }
+   div.item div.info {
+      display: inline-block;
+      vertical-align: top;
+      width: 315px;
+      margin: -3px 2px 3px;
+   }
+      div.item div.info a {
+         font: 16px 'ArialNarrow-Bold', sans-serif;
+         color: #6b8e10;
+         text-transform: uppercase;
+      }
+         div.item div.info a:hover {
+            text-decoration: none;
+            color: #3a3a3a;
+         }
+      div.item div.info p {
+         font: 12px Arial, sans-serif;
+         line-height: 14px;
+         color: #666666;
+      }
+
+	  
+div.item_m {
+   display: block;
+   vertical-align: top;
+   width: 470px;
+   margin: 20px 0 40px;
+}
+
+   div.item_m div.info {
+      display: inline-block;
+      vertical-align: top;
+      width: 315px;
+      margin: -3px 2px 3px;
+   }
+      div.item_m div.info p.caption {
+         font: 16px 'ArialNarrow-Bold', sans-serif;
+         color: #6b8e10;
+         text-transform: uppercase;
+      }
+   div.item_m div.info a {
+         font: 16px 'ArialNarrow-Bold', sans-serif;
+         color: #6b8e10;
+         text-transform: uppercase;
+      }
+         div.item_m div.info a:hover {
+            text-decoration: none;
+            color: #3a3a3a;
+         }
+      div.item_m div.info p {
+         font: 12px Arial, sans-serif;
+         line-height: 14px;
+         color: #666666;
+      }
+  
+/* =============================================================================
+   contact
+   ========================================================================== */
+div.contact {
+   display: inline-block;
+   vertical-align: top;
+   width: 410px;
+   padding-left: 5px;
+   margin-right: 135px;
+}
+   div.contact span {
+      font: bold 12px Arial, sans-serif;
+      color: #666666;
+      display: block;
+   }
+      div.contact span.address {
+         margin-top: 14px;
+      }
+      div.contact span.e-mail {
+         margin: 12px 0 6px;
+      }
+      div.contact span abbr {
+         font-weight: normal;
+         margin-left: 3px;
+      }
+      div.contact span b {
+         display: inline-block;
+         width: 38px;
+      }
+   div.contact p {
+      color: #666666;
+      margin-bottom: 10px;
+   }
+   div.contact span a {
+      color: #60800d;
+      font-weight: normal;
+      margin-left: 20px;
+   }
+      div.contact span a:hover {
+         color: #2c2c2c;
+         text-decoration: none;
+      }
+div.map {
+   display: inline-block;
+   vertical-align: top;
+   width: 389px; height: 380px;
+   margin: 16px 0;
+   
+   border: 4px solid #94c11f;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+      
+   position: relative;
+   behavior: url(/css/PIE/PIE.htc);
+   
+}
+   div.map img {
+      width: 100%; height: 100%;
+      
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+         
+      position: relative;
+      behavior: url(/css/PIE/PIE.htc);
+   }
+
+
+/* =============================================================================
+   News
+   ========================================================================== */
+div.news {
+   padding: 0 33px 0 5px;
+}
+   div.news div.news-item {
+      display: inline-block;
+      margin: 16px 0 0;
+   }
+      div.news div.news-item span.date {
+         background-color: #666666;
+         font: bold 11px Arial, sans-serif;
+         color: #ebebeb;
+         display: inline-block;
+         float: right;
+         padding: 1px 5px;
+         margin-top: 5px;
+         
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+            
+         position: relative;
+         behavior: url(/css/PIE/PIE.htc);
+      }
+      div.news div.news-item a {
+         color: #60800d;
+         font: 16px 'ArialNarrow-Bold', sans-serif;
+         display: inline-block;
+      }
+         div.news div.news-item a:hover {
+            color: #2c2c2c;
+         }
+      div.news div.news-item p {
+         font-size: 12px;
+         color: #666666;
+      }
+
+/* =============================================================================
+   ul.pages
+   ========================================================================== */
+ul.pages {
+   list-style: none;
+   height: 20px;
+   display: inline-block;
+   margin-top: 15px;
+}
+   ul.pages li {
+      float: left;
+      margin: 1px 2px;
+   }
+      ul.pages li a {
+         font: bold 11px Arial, sans-serif;
+         color: #666666;
+         padding: 2px 6px;
+         display: inline-block;
+         
+         position: relative;
+         behavior: url(/css/PIE/PIE.htc);
+      }
+         ul.pages li a:hover {
+            background-color: #60800d;
+            color: #fff;
+            text-decoration: none;
+            
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+         }
+         ul.pages li a.active, ul.pages li a.active:hover {
+            background-color: #666666;
+            text-decoration: none;
+            color: #ebebeb;
+            
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+         }
+div.fix-center {
+   text-align: center;
+}
+/* =============================================================================
+   Footer Styles
+   ========================================================================== */
+footer {
+	clear: both;
+   font-size: 11px;
+   color: #666666;
+   height: 85px;
+}
+   footer ul.footer-navigation {
+      display: block;
+      border-bottom: 1px solid #94c11f;
+      list-style: none;
+      height: 29px;
+      margin-bottom: 10px;
+   }
+      footer ul.footer-navigation li {
+         float: left;
+         margin: 0 59px;
+      }
+         footer ul.footer-navigation li a {
+            font: 14px 'ArialNarrow-Bold', sans-serif;
+            color: #2c2c2c;
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-shadow: 0 1px 0 #fff;
+         }
+   footer div.telephone {
+      background: url('/images/background/footer-contact.png') no-repeat scroll left -3px transparent;
+      display: inline-block;
+      vertical-align: top;
+      width: 315px;
+      padding-left: 65px;
+      margin-left: 20px;
+   }
+      footer div.telephone span {
+         display: block;
+         color: #2c2c2c;
+         font-size: 12px;
+         margin: 0 0 3px;
+      }
+         footer div.telephone span abbr {
+            color: #666666;
+            display: inline-block;
+            width: 35px;
+         }
+   footer span.copyright {
+      letter-spacing: 0.1px;
+   }
+   footer span.yesgroup {
+      float: right;
+      margin-right: 25px;
+   }
+      footer span.yesgroup a {
+         color: #547304;
+      }
+         footer span.yesgroup a:hover {
+            text-decoration: none;
+         }
+
+/* =============================================================================
+   pie-test
+   ========================================================================== */
+.pie-test {
+   
+   -moz-transform:rotate(-5deg);
+   -webkit-transform:rotate(-5deg);
+   -o-transform:rotate(-5deg);
+   transform:rotate(-5deg);
+   
+   -moz-transition: color 1s;
+   -webkit-transition: color 1s;
+   -o-transition: color 1s;
+   
+   opacity: 1;
+   filter: alpha(opacity=100);
+   
+   width: 777px;
+   display: block;
+   margin: 131px auto 0;
+   padding: 30px 0;
+   text-align: center;
+   
+   border-top: 1px solid #e8e8e8;
+   border-bottom: 1px solid #e8e8e8;
+   border-left: 1px solid #e8e8e8;
+   border-right: 1px solid #e8e8e8;
+   
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   
+   -webkit-box-shadow: 0 5px 5px #666666;
+   -moz-box-shadow: 0 5px 5px #666666;
+   box-shadow: 0 5px 5px #666666;
+   
+   background: #ffffff;
+   background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#e8e8e8));
+   background: -webkit-linear-gradient(#ffffff, #e8e8e8);
+   background: -moz-linear-gradient(#ffffff, #e8e8e8);
+   background: -ms-linear-gradient(#ffffff, #e8e8e8);
+   background: -o-linear-gradient(#ffffff, #e8e8e8);
+   background: linear-gradient(#ffffff, #e8e8e8);
+   -pie-background: linear-gradient(#ffffff, #e8e8e8);
+   
+   position: relative;
+   behavior: url(/css/PIE/PIE.htc);
+}
+div.news1 {
+   padding: 0 33px 0 0;
+}
+   div.news1 div.news-item {
+      display: inline-block;
+      margin: 0 0;
+   }
+      div.news1 div.news-item span.date {
+         background-color: #666666;
+         font: bold 11px Arial, sans-serif;
+         color: #ebebeb;
+         display: inline-block;
+         float: right;
+         padding: 1px 5px;
+         margin-top: 5px;
+         
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+            
+         position: relative;
+         behavior: url(/css/PIE/PIE.htc);
+      }
+      div.news1 div.news-item a {
+         color: #60800d;
+         font: 16px 'ArialNarrow-Bold', sans-serif;
+         display: inline-block;
+      }
+         div.news1 div.news-item a:hover {
+            color: #2c2c2c;
+         }
+
+/* =============================================================================
+   END CSS Autor: Kharitonov Alexandr
+   ========================================================================== */
+
+div.info1 span.p {
+	font: 16px 'ArialNarrow-Bold', sans-serif;
+	color: #6b8e10;
+}
+div.info1 p {
+	font: 12px Arial, sans-serif;
+	line-height: 14px;
+	letter-spacing: 0.2px;
+	color: #666666;
+	
+}
+
+div.steps .error {
+    color: #FF5656 !important;
+}

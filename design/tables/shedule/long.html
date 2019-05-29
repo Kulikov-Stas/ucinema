@@ -1,0 +1,56 @@
+				<h1 class="film-title sched-t">Расписание</h1>
+
+<?php $content = '';
+	global $msi, $month_arr, $weekday_arr;
+	$q = 'SELECT film.nameid as filmname, film.linkid as linkname, film.duration, shedule.*
+		FROM shedule
+		INNER JOIN film ON shedule.nameid = film.id
+		WHERE shedule.nameid = '.$_GET['link1'].' AND film.visible = 1 ORDER BY shedule.date ASC, shedule.time ASC';
+
+	$r = $msi->query($q);
+
+		while($row = $r->fetch_assoc()){
+			$date = $row['date'];
+			$datearr = explode('-',$row['date']);
+			if ($date != $prev_date){
+				$content .= '<section class="schedule-holder film-schedule">
+						<h2>'.$weekday_arr[date('l',mktime(0,0,0,$datearr[1],$datearr[2],$datearr[0]))].', '.(int)$datearr[2].' '.$month_arr[$datearr[1]].'</h2>
+						<ul>';
+$p = 'SELECT film.nameid as filmname, film.linkid as linkname, film.duration, shedule.*, shedule.link as link, SEC_TO_TIME(TIME_TO_SEC(shedule.time)+TIME_TO_SEC(film.duration)) AS tilltime FROM shedule
+		INNER JOIN film ON shedule.nameid = film.id
+		WHERE shedule.nameid = '.$_GET['link1'].' AND shedule.visible = 1 AND shedule.date = "'.$date.'" ORDER BY shedule.date ASC, shedule.time ASC';
+
+	$o = $msi->query($p);
+
+		while($i = $o->fetch_assoc()){
+				$itime = explode(':',$i['time']);
+				$tilltime = explode(':',$i['tilltime']);
+
+				$ihour = $itime[0];
+				$iminutes = $itime[1];
+				$tillhour = $tilltime[0];
+				if ($tillhour >= 24) {
+					$tillhour -= 24;
+					if ($tillhour < 10){
+						$tillhour = '0'.$tillhour;
+					}
+				}
+				$tillminutes = $tilltime[1];
+$content .= '<li>
+				<section class="time">
+<span class="time-container f-c"><span class="first-count">'.$ihour.'</span><span class="second-count">'.$iminutes.'</span></span>
+<span class="time-container f-c"><span class="first-count">'.$tillhour.'</span><span class="second-count">'.$tillminutes.'</span></span>
+				</section>
+<form method="get" action="'.$i['link'].'?shedule-id='.$i['id'].'">
+    <button class="button" type="submit">билеты</button>
+     <input type="hidden" name="shedule-id" value="'.$i['id'].'" />
+</form>
+							</li>';
+		}
+$content .=			'</ul>
+					</section><!-- end schedule-holder -->';
+			}
+		$prev_date = $date;
+                }
+                echo $content;
+?>

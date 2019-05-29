@@ -1,0 +1,6 @@
+RewriteEngine Off
+#RewriteRule ^.htaccess$ - [F]
+
+#AddHandler application/x-httpd-php .html
+
+#RewriteRule ^([a-zA-Z0-9_]*)/?([a-zA-Z0-9_]*)/?([a-zA-Z0-9_]*)(/?)$ index.php?page=$1&id=$2&param=$3
